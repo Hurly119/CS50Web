@@ -1,0 +1,26 @@
+.Navigate {
+  background-color: gold;
+  overflow: hidden;
+  text-align: center;
+  font-family: sans-serif, Arial;
+}
+
+.Navigate a {
+  display: inline-block;
+  color: black;
+  font-size: 25px;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.Navigate a:hover {
+  color: red;
+  background-color: black;
+}
+
+.Navigate a.current {
+  color: black;
+  background-color: red;
+}
+
+/*# sourceMappingURL=Navigate.css.map */

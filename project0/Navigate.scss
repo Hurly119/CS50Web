@@ -1,0 +1,24 @@
+$color: red;
+$color2: black;
+.Navigate{
+  background-color: gold;
+  overflow: hidden;
+  text-align: center;
+  font-family: sans-serif,Arial;
+}
+.Navigate a{
+  display: inline-block;
+  color: $color2;
+  font-size: 25px;
+  padding:15px 20px;
+  text-decoration: none;
+}
+
+.Navigate a:hover{
+  color: $color;
+  background-color: $color2;
+}
+.Navigate a.current{
+  color: $color2;
+  background-color: $color;
+}
