@@ -1,10 +1,15 @@
+body {
+  margin: 0;
+  background-color: #fff87a;
+}
+
 .Navigate {
   background-color: gold;
   overflow: hidden;
   text-align: center;
   font-family: sans-serif, Arial;
+  width: 100%;
 }
-
 .Navigate a {
   display: inline-block;
   color: black;
@@ -12,12 +17,10 @@
   padding: 15px 20px;
   text-decoration: none;
 }
-
 .Navigate a:hover {
   color: red;
   background-color: black;
 }
-
 .Navigate a.current {
   color: black;
   background-color: red;

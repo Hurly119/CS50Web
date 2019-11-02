@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    @import 'Navigate.css';
+    table,th,td{
+      border: 1px solid black;
+      border-collapse: collapse;
+      font-size: 24px;
+
+    }
+    img {
+      border-radius: 50%;
+      height: 200px;
+      width:250px;
+    }
+    ul>li{
+      font-size: 30px;
+    }
+    #nav{
+      float:left;
+      position: fixed;
+    }
+    #top{
+      float:right;
+      margin-right: 200px;
+      font-size: 20px;
+      color:blue;
+    }
+    #nav a:hover{
+      color:red;
+    }
+    #Food,#Games,#Books{
+      text-align: center;
+      margin-right: 200px;
+      margin-left: 280px;
+    }
+    table{
+      width:100%;
+      table-layout: fixed;;
+    }
+    td > span{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="Navigate">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Interests.html" class="current">Interests</a>
+      <a href="Random.html">Random</a>
+    </div>
+  <div id="nav">
+    <img src="images/shapesnatch.jpg">
+    <h1>MY INTERESTS</h1>
+    <ul>
+      <li><a href="#Food">Food</a></li>
+      <li><a href="#Games">Games</a></li>
+      <li><a href="#Books">Books</a></li>
+    </ul>
+  </div>
+  <div id="Food">
+    <h1>FOOD</h1>
+    <table align="center">
+      <tr>
+        <th>FOOD OR BEVERAGES</th>
+        <th>WHY</th>
+        <th>PICTURE</th>
+      </tr>
+      <tr>
+        <td>PIZZA</td>
+        <td>It looks and tastes so GOOOOOD! Uhnngh~</td>
+        <td><img src="images/PIZZA.jpg"></td>
+      </tr>
+      <tr>
+        <td>BURGER</td>
+        <td>It is sooooo BEAUTIFUL and yummy Rawr~</td>
+        <td><img src="images/BURGER.jpg"></td>
+      </tr>
+      <tr>
+        <td>DIET COKE</td>
+        <td>Too much sugar is a big nonono, so diet coke after eating some nice goodies.</td>
+        <td><img src="images/COKE.jpg"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="Games">
+    <h1>GAMES</h1>
+    <table align="center">
+      <tr>
+        <th>GAMES</th>
+        <th>DEVELOPED BY</th>
+        <th>PICTURE</th>
+      </tr>
+      <tr>
+        <td>FINAL FANTASY IX</td>
+        <td>SQUARE ENIX</td>
+        <td><img src="images/ffix.jpg"></td>
+      </tr>
+      <tr>
+        <td>STEINS;GATE</td>
+        <td>SPIKE CHUNSOFT</td>
+        <td><img src="images/steins.jpg"></td>
+      </tr>
+      <tr>
+        <td>PERSONA</td>
+        <td>ATLUS</td>
+        <td><img src="images/persona.jpg"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="Books">
+    <h1>BOOK SERIES</h1>
+    <table align="center">
+      <tr>
+        <th>BOOK SERIES</th>
+        <th>AUTHOR & QUOTE</th>
+        <th>PICTURE</th>
+      </tr>
+      <tr>
+        <td>The Kingkiller Chronicles</td>
+        <td>"You have to be a bit of a liar to tell a story the right way."<br><span>~Patrick Rothfuss</span></td>
+        <td><img src="images/king.jpg"></td>
+      </tr>
+      <tr>
+        <td>Gentlemen Bastards</td>
+        <td>“There’s no freedom quite like the freedom of being constantly underestimated.”<br><span>~Scott Lynch</span></td>
+        <td><img src="images/bastard.jpg"></td>
+      </tr>
+      <tr>
+        <td>The First Law</td>
+        <td>"You have to be realistic about things."<br><span>~Joe Abercrombie</span></td>
+        <td><img src="images/first.jpg"></td>
+      </tr>
+    </table>
+</html>
