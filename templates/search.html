@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %} WELCOME TO MY WEBPAGE {% endblock %}
+
+{% block head %}
+<style media="screen">
+</style>
+{% endblock %}
+{% block body %}
+
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+    {{message}}
+</div>
+{% endfor %}
+
+<form action="{{ url_for('search') }}" method="post" id="log-in">
+  <input type="text" name="ISBN" placeholder="Enter ISBN">
+  <input type="password" name="TITLE" placeholder="Enter title">
+  <input type="password" name="AUTHOR" placeholder="Enter author">
+  <button form="log-in">SEARCH</button>
+</form>
+<ul>
+{% for books in bookQ %}
+  <li>
+    {{ books.isbn, books.title, books.author}}
+  </li>
+  {% endfor %}
+{% endblock %}
+</ul>
