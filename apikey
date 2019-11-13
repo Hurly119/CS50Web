@@ -1,2 +1,73 @@
 key: jKHr5blcnvzAgZ9LsNUrlg
 secret: 6RkAglt3ByIJEhHZYBFI6bIhyVGOAD1PDgynvVJE
+database url : postgres://msebonvjdckais:15a3faf45a53391911a038f322489eb1ee766f0026b2ba26edebd1d8c4d55ef3@ec2-174-129-253-162.compute-1.amazonaws.com:5432/d63q7t757on1od
+response
+
+{'books':
+[{'id': 29207858,
+'isbn': '1632168146',
+'isbn13': '9781632168146',
+'ratings_count': 0,
+'reviews_count': 2,
+'text_reviews_count': 0,
+'work_ratings_count': 27,
+'work_reviews_count': 122,
+'work_text_reviews_count': 9,
+'average_rating': '4.11'}]}
+
+
+
+
+{"GoodreadsResponse":
+{"Request": {"authentication": "true", "key": "jKHr5blcnvzAgZ9LsNUrlg", "method": "search_index"},
+"search": {"query": "9781632168146", "results-start": "1", "results-end": "1", "total-results": "1", "source": "Goodreads", "query-time-seconds": "0.01",
+"results": {"work": {"id": {"@type": "integer", "#text": "44568973"},
+"books_count": {"@type": "integer", "#text": "3"},
+"ratings_count": {"@type": "integer", "#text": "27"},
+"text_reviews_count": {"@type": "integer", "#text": "9"},
+"original_publication_year": {"@type": "integer", "#text": "2015"},
+"original_publication_month": {"@type": "integer", "#text": "3"},
+"original_publication_day": {"@type": "integer", "#text": "2"},
+"average_rating": "4.11",
+"best_book": {"@type": "Book", "id": {"@type": "integer", "#text": "29207858"},
+"title": "Memory",
+"author": {"id": {"@type": "integer", "#text": "1587750"}, "name": "Doug Lloyd"},
+"image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+"small_image_url": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png"}}}}}}
+
+
+
+
+
+
+
+
+
+{'GoodreadsResponse':
+{'Request': {'authentication': 'true', 'key': 'jKHr5blcnvzAgZ9LsNUrlg', 'method': 'search_index'},
+'search': {'query': 'Krondor: The Betrayal', 'results-start': '1', 'results-end': '6', 'total-results': '6', 'source': 'Goodreads', 'query-time-seconds': '0.09',
+'results': {'work': [{'id': {'@type': 'integer', '#text': '2960496'},
+'books_count': {'@type': 'integer', '#text': '6'},
+'ratings_count': {'@type': 'integer', '#text': '13325'},
+'text_reviews_count': {'@type': 'integer', '#text': '161'},
+'original_publication_year': {'@type': 'integer', '#text': '1998'},
+'original_publication_month': {'@type': 'integer', '#text': '11'},
+'original_publication_day': {'@type': 'integer', '#text': '1'},
+'average_rating': '3.85',
+'best_book': {'@type': 'Book', 'id': {'@type': 'integer', '#text': '92918'},
+'title': 'Krondor: The Betrayal (The Riftwar Legacy, #1)',
+'author': {'id': {'@type': 'integer', '#text': '8588'}, 'name': 'Raymond E. Feist'},
+'image_url': 'https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png',
+'small_image_url': 'https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png'}},
+
+
+
+
+{'id': {'@type': 'integer', '#text': '68047825'},
+'books_count': {'@type': 'integer', '#text': '1'},
+'ratings_count': {'@type': 'integer', '#text': '2'},
+'text_reviews_count': {'@type': 'integer', '#text': '0'},
+'original_publication_year': {'@type': 'integer', '@nil': 'true'},
+'original_publication_month': {'@type': 'integer', '@nil': 'true'},
+'original_publication_day': {'@type': 'integer', '@nil': 'true'},
+'average_rating': '5.00', 'best_book': {'@type': 'Book', 'id': {'@type': 'integer', '#text': '43724259'}, 'title': 'Krondor: The Betrayal (The Riftwar Legacy)', 'author': {'id': {'@type': 'integer', '#text': '18825394'}, 'name': 'Raymond E Feist (author)'}, 'image_url': 'https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png', 'small_image_url': 'https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png'}}, {'id': {'@type': 'integer', '#text': '67507587'}, 'books_count': {'@type': 'integer', '#text': '1'}, 'ratings_count': {'@type': 'integer', '#text': '2'}, 'text_reviews_count': {'@type': 'integer', '#text': '0'}, 'original_publication_year': {'@type': 'integer', '@nil': 'true'}, 'original_publication_month': {'@type': 'integer', '@nil': 'true'}, 'original_publication_day': {'@type': 'integer', '@nil': 'true'}, 'average_rating': '4.50', 'best_book': {'@type': 'Book', 'id': {'@type': 'integer', '#text': '43427896'}, 'title': 'KRONDOR THE BETRAYAL (RIFTWAR LEGACY, NO 1)', 'author': {'id': {'@type': 'integer', '#text': '8588'}, 'name': 'Raymond E. Feist'}, 'image_url': 'https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png', 'small_image_url': 'https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png'}}, {'id': {'@type': 'integer', '#text': '17823434'}, 'books_count': {'@type': 'integer', '#text': '1'}, 'ratings_count': {'@type': 'integer', '#text': '15'}, 'text_reviews_count': {'@type': 'integer', '#text': '0'}, 'original_publication_year': {'@type': 'integer', '#text': '2011'}, 'original_publication_month': {'@type': 'integer', '#text': '9'}, 'original_publication_day': {'@type': 'integer', '#text': '1'}, 'average_rating': '4.87', 'best_book': {'@type': 'Book', 'id': {'@type': 'integer', '#text': '12693556'}, 'title': "Articles on Raymond E. Feist, Including: Midkemia, Novindus, Betrayal at Krondor, the Riftwar Saga, Kelewan, the Kingdom of the Isles, the Empire of Great Kesh, Return to Krondor, Empire Trilogy, Tsurani, Krondor's Sons, Triagia, Elvandar", 'author': {'id': {'@type': 'integer', '#text': '5167894'}, 'name': 'Hephaestus Books'}, 'image_url': 'https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png', 'small_image_url': 'https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png'}}, {'id': {'@type': 'integer', '#text': '89593'}, 'books_count': {'@type': 'integer', '#text': '1'}, 'ratings_count': {'@type': 'integer', '#text': '2'}, 'text_reviews_count': {'@type': 'integer', '#text': '0'}, 'original_publication_year': {'@type': 'integer', '#text': '1994'}, 'original_publication_month': {'@type': 'integer', '#text': '6'}, 'original_publication_day': {'@type': 'integer', '#text': '20'}, 'average_rating': '4.50', 'best_book': {'@type': 'Book', 'id': {'@type': 'integer', '#text': '92919'}, 'title': 'Betrayal at Krondor: The Official Strategy Guide (Secrets of the games)', 'author': {'id': {'@type': 'integer', '#text': '53309'}, 'name': 'Bernard H. Yee'}, 'image_url': 'https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png', 'small_image_url': 'https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png'}}, {'id': {'@type': 'integer', '#text': '18061503'}, 'books_count': {'@type': 'integer', '#text': '1'}, 'ratings_count': {'@type': 'integer', '#text': '1'}, 'text_reviews_count': {'@type': 'integer', '#text': '1'}, 'original_publication_year': {'@type': 'integer', '#text': '2011'}, 'original_publication_month': {'@type': 'integer', '#text': '10'}, 'original_publication_day': {'@type': 'integer', '#text': '28'}, 'average_rating': '5.00', 'best_book': {'@type': 'Book', 'id': {'@type': 'integer', '#text': '12906893'}, 'title': 'Video Games Based on Novels (Book Guide): Moria, Betrayal at Krondor, S.T.A.L.K.E.R.: Shadow of Chernobyl, the Witcher, I Have No Mouth', 'author': {'id': {'@type': 'integer', '#text': '5153555'}, 'name': 'Source Wikipedia'}, 'image_url': 'https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png', 'small_image_url': 'https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png'}}]}}}}

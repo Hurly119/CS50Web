@@ -16,14 +16,21 @@
            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="{{ url_for('searchpg') }}">Search</a>
+           <a class="nav-link" href="{{ url_for('search') }}">Search</a>
+         </li>
+         {% if not LoggedIn %}
+         <li class="nav-item">
+           <a class="nav-link" href="{{ url_for('login') }}">Log-in</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="{{ url_for('loginpg') }}">Log-in</a>
+           <a class="nav-link" href="{{ url_for('register') }}">Register</a>
          </li>
+         {% else %}
          <li class="nav-item">
-           <a class="nav-link" href="{{ url_for('registerpg') }}">Register</a>
+           <a class="nav-link" href="{{ url_for('logout') }}">Log-Out</a>
          </li>
+         {% endif %}
+       </ul>
       </div>
     </nav>
     {% block body %}

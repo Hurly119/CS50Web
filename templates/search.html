@@ -11,21 +11,41 @@
 
 {% for message in get_flashed_messages() %}
 <div class="alert alert-warning">
-    {{message}}
+    {{ message }}
 </div>
 {% endfor %}
 
 <form action="{{ url_for('search') }}" method="post" id="log-in">
   <input type="text" name="ISBN" placeholder="Enter ISBN">
-  <input type="password" name="TITLE" placeholder="Enter title">
-  <input type="password" name="AUTHOR" placeholder="Enter author">
+  <input type="text" name="TITLE" placeholder="Enter title">
+  <input type="text" name="AUTHOR" placeholder="Enter author">
   <button form="log-in">SEARCH</button>
 </form>
-<ul>
-{% for books in bookQ %}
-  <li>
-    {{ books.isbn, books.title, books.author}}
-  </li>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-sm-3">
+      <h3>ISBN</h3>
+    </div>
+    <div class="col-lg-3 col-sm-3">
+      <h3>TITLE</h3>
+    </div>
+    <div class="col-lg-3 col-sm-3">
+      <h3>AUTHOR</h3>
+    </div>
+  </div>
+  {% for books in bookQ %}
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-sm-3">
+      <h1><a href="{{ url_for('booksearch', bookISBN=books.isbn, bookTitle=books.title) }}">{{ books.isbn }}</a><h1></h1>
+    </div>
+    <div class="col-lg-3 col-sm-3">
+      <h1>{{ books.title }}<h1></h1>
+    </div>
+    <div class="col-lg-3 col-sm-3">
+      <h1>{{ books.author }}<h1></h1>
+    </div>
+  </div>
   {% endfor %}
+</div>
 {% endblock %}
-</ul>
+</table>

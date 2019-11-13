@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %} WELCOME TO MY WEBPAGE {% endblock %}
+
+{% block head %}
+<style media="screen">
+  #Reviews{
+    float: right;
+  }
+</style>
+{% endblock %}
+{% block body %}
+
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+    {{message}}
+</div>
+{% endfor %}
+<form action="{{ url_for('postreview', bookISBN=bookISBN, bookTitle=bookTitle) }}" method="post" id="test">
+  <div>
+    <textarea name="review" rows="8" cols="80"></textarea>
+  </div>
+  <button form="test">SUBMIT</button>
+</form>
+<div id="info">
+<img src="{{ BookIMG }}">
+<p>{{ Title }}<br>{{ Author }}<br> {{PubYear}} <br>{{ RatingsCount }}<br>{{ AVGRating }}</p>
+</div>
+<div id="review"></div>
+<div id="Reviews">
+  <ul>
+  {% for reviews in Reviews %}
+  <li>{{reviews.username}}</li>
+  <li>{{reviews.review}}</li>
+  {% endfor %}
+  </ul>
+</div>
+{% endblock %}
