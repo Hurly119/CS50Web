@@ -17,6 +17,7 @@ if not os.getenv("DATABASE_URL"):
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+app.config["DATABASE_URL"] = "postgres://msebonvjdckais:15a3faf45a53391911a038f322489eb1ee766f0026b2ba26edebd1d8c4d55ef3@ec2-174-129-253-162.compute-1.amazonaws.com:5432/d63q7t757on1od"
 Session(app)
 
 key = "jKHr5blcnvzAgZ9LsNUrlg"
@@ -95,7 +96,8 @@ def search():
 @app.route("/booksearch/<string:bookISBN>/<string:bookTitle>", methods=["POST","GET"])
 def booksearch(bookISBN,bookTitle):
     LoggedIn = "username" in session
-    Reviews = db.execute("SELECT * FROM reviews").fetchall()
+    Reviews = db.execute("SELECT * FROM reviews WHERE isbn=:isbn",
+    {"isbn":bookISBN}).fetchall()
     data = requests.get("https://www.goodreads.com/search/index.xml", params={"key": "jKHr5blcnvzAgZ9LsNUrlg", "q": bookISBN})
     jsonData = json.loads(json.dumps(xmltodict.parse(data.text)))
     try:
@@ -129,3 +131,6 @@ def postreview(bookISBN, bookTitle):
         return redirect(url_for("booksearch",bookISBN=bookISBN,bookTitle=bookTitle))
     flash("Please log-in to review")
     return redirect(url_for("search"))
+
+if __name__ == "__main__":
+    app.run()
