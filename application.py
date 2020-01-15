@@ -106,14 +106,20 @@ def booksearch(bookISBN,bookTitle):
     except:
         ReviewYear = jsonData["GoodreadsResponse"]["search"]["results"]["work"]
     BookInfo = ReviewYear['best_book']
-    PubYear = ReviewYear["original_publication_year"]["#text"]
+    # PubYear = ReviewYear["original_publication_year"]["#text"]
     RatingsCount = int(ReviewYear["ratings_count"]["#text"])
     AVGRating = float(ReviewYear["average_rating"])
-    Author = BookInfo["author"]["name"]
-    Title = BookInfo["title"]
+    # Author = BookInfo["author"]["name"]
+    # Title = BookInfo["title"]
     BookIMG = BookInfo["image_url"]
-    return render_template("booksearched.html",BookIMG=BookIMG, Title=Title, Author=Author,
-    AVGRating=AVGRating, RatingsCount=RatingsCount, PubYear=PubYear,LoggedIn=LoggedIn, bookISBN=bookISBN, bookTitle=bookTitle,Reviews=Reviews)
+    db.execute("UPDATE books SET rateCount=:ratecount, avgRate=:avgrate WHERE title=:title",
+    {"ratecount":RatingsCount,"avgrate":AVGRating, "title":bookTitle})
+    db.commit()
+    BookDetails = db.execute("SELECT * FROM books WHERE title=:title",{"title":bookTitle})
+    return render_template("booksearched.html",BookIMG=BookIMG,
+    # Title=Title, Author=Author,
+    # AVGRating=AVGRating, RatingsCount=RatingsCount, PubYear=PubYear,
+    BookDetails=BookDetails, LoggedIn=LoggedIn, bookISBN=bookISBN, bookTitle=bookTitle,Reviews=Reviews)
 
 @app.route("/postreview/<string:bookISBN>/<string:bookTitle>", methods=["POST"])
 def postreview(bookISBN, bookTitle):
@@ -122,7 +128,7 @@ def postreview(bookISBN, bookTitle):
         review = request.form.get("review")
         username = session["username"]
         hasComment = db.execute("SELECT * FROM reviews WHERE username=:username AND isbn=:isbn AND title=:title",
-        {"username":username, "isbn":bookISBN, "title":bookTitle}).fetchall()
+        {"username":username, "isbn":bookISBN, "title":bookTitle}).fetchone()
         if not hasComment:
             db.execute("INSERT INTO reviews (username, review, isbn, title) VALUES (:username, :review, :isbn, :title)",
             {"username":username, "review":review, "isbn":bookISBN, "title":bookTitle})
