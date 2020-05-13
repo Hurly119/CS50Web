@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %} WELCOME TO MY WEBPAGE {% endblock %}
+
+{% block head %}
+<style media="screen">
+</style>
+{% endblock %}
+{% block body %}
+
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+    {{message}}
+</div>
+{% endfor %}
+
+<form action="{{ url_for('register') }}" method="post" id="register">
+  <input type="text" name="username" placeholder="Enter username">
+  <input type="password" name="password" placeholder="Enter password">
+  <input type="password" name="cpass" placeholder="Confirm password">
+  <button form="register"> REGISTER </button>
+</form>
+{% endblock %}

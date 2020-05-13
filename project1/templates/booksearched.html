@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %} WELCOME TO MY WEBPAGE {% endblock %}
+
+{% block head %}
+<style media="screen">
+  #image{
+    float:left;
+  }
+.formDiv{
+  margin-top:50px;
+}
+  .postDiv{
+    background:#d1d1d1;
+    padding: 30px 30px;
+  }
+  #Reviews{
+    margin: 100px 100px;
+  }
+</style>
+{% endblock %}
+{% block body %}
+
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+    {{message}}
+</div>
+{% endfor %}
+
+<div id="info">
+<img id="image" src="{{ BookIMG }}">
+<p>{{ Title }}<br>{{  Author }}<br> {{ PubYear}} <br>{{ RatingsCount }}<br>{{  AVGRating }}</p>
+</div>
+
+<div id="Reviews">
+  <h3 class="text-center">Book Reviews</h3>
+  {% for reviews in Reviews %}
+  <div class="reviewList">
+      <div class="col-4">
+          <h6>{{reviews.username}}</h6>User Rated: {{reviews.rate}}
+      </div>
+      <div class="col-4">
+          User Rated: {{reviews.review}}
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+<div class="formDiv">
+  <form action="{{ url_for('postreview', bookISBN=bookISBN, bookTitle=bookTitle) }}" method="post" id="test">
+    <div class="postDiv container-fluid">
+      <div class="rateSelect">
+      <h5>Rate the book:</h5>
+      <select class="" name="rate">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      </div>
+      <textarea name="review" rows="8" cols="80"></textarea><br>
+      <button form="test">SUBMIT</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

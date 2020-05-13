@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %} WELCOME TO MY WEBPAGE {% endblock %}
+
+{% block head %}
+<style media="screen">
+</style>
+{% endblock %}
+{% block body %}
+
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+    {{message}}
+</div>
+{% endfor %}
+
+{{ test }}
+
+{% endblock %}
