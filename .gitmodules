@@ -1,6 +1,0 @@
-[submodule "proj0"]
-	path = proj0
-	url = ./proj0/.git
-[submodule "proj1/project1"]
-	path = proj1/project1
-	url = ./proj1/project1/.git
