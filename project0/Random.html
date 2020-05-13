@@ -5,8 +5,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
       @import 'Navigate.css';
+      body{
+        background-image: url(images/jojoback.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
       #About{
-        float: left;
+        text-align: center;
+        color:black;
+        text-shadow: 3px 3px 3px gold;
+        font-weight: bold;
       }
       #logo{
         border-radius: 50%;
@@ -21,8 +29,17 @@
         height:175px;
         margin-bottom: 30px;
       }
-      .below{
-        margin-left: 190px;
+      @media(max-width:750px){
+        body{
+          background-color: black;
+          background-image: url(images/dioda.png);
+          background-repeat: repeat;
+          background-size: contain;
+        }
+        #About{
+          color:white;
+          text-shadow: 3px 3px 3px red;
+        }
       }
     </style>
   </style>
@@ -37,7 +54,7 @@
     <div id="About">
       <img src="images/shapesnatch.jpg" id="logo">
       <h1>JOJO VS DIO</h1>
-      <h4 style="text-align:center;">Anime: JoJo's Bizarre <br>Adventure:<br> Stardust Crusaders</h4>
+      <h2 style="text-align:center;">Anime: JoJo's Bizarre <br>Adventure:<br> Stardust Crusaders</h2>
     </div>
     <div class="container">
       <div class="row justify-content-center">
