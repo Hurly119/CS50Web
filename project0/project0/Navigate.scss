@@ -1,0 +1,31 @@
+$color: red;
+$color2: black;
+
+body{
+  margin:0;
+  background-color: #fff87a;
+}
+.Navigate{
+  background-color: gold;
+  overflow: hidden;
+  text-align: center;
+  font-family: sans-serif,Arial;
+  width: 100%;
+  a{
+    display: inline-block;
+    color: $color2;
+    font-size: 25px;
+    padding:15px 20px;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: $color;
+    background-color: $color2;
+  }
+
+  a.current{
+   color: $color2;
+   background-color: $color;
+ }
+}
